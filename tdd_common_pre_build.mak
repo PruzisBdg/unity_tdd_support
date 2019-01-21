@@ -4,11 +4,11 @@
 #
 # ---------------------------------------------------------------------------
 
-# Make sure any libraries you link to are from this/compatible gcc.
-C_COMPILER = mingw32-gcc
+# Default TDD compiler: Make sure any libraries you link to are from this/compatible gcc.
+TDD_C_COMPILER ?= mingw32-gcc
 
-# All Utility software and harnesses are here.
-SWR_LOC = c:/spj6/swr
+# Default location for all Utility software and harnesses are here.
+SPJ_SWR_LOC ?= c:/spj6/swr
 
 ifeq ($(OS),Windows_NT)
 	TARGET_EXTENSION = .exe
@@ -23,7 +23,7 @@ else
 endif
 
 # Additional TDD support (other than Unity) is with all the Utility software.
-TDD_SUPPORT_DIR = $(SWR_LOC)/unity_tdd
+TDD_SUPPORT_DIR = $(SPJ_SWR_LOC)/unity_tdd
 
 # Final target is always .exe / .out. 'TARGET_BASE' is always defined for a harness
 TARGET = $(TARGET_BASE)$(TARGET_EXTENSION)
@@ -43,9 +43,9 @@ HARNESS_MAIN_SRC = run-$(HARNESS_TESTS_SRC)
 
 # Utility libraries, if needed. Library paths are absolute because different harnesses are different levels down.
 ARITH_LIB_NAME = arith_x86_gcc
-ARITH_LIB_PATH = $(SWR_LOC)/arith/arith_x86_gcc/bin/Debug
+ARITH_LIB_PATH = $(SPJ_SWR_LOC)/arith/arith_x86_gcc/bin/Debug
 UTIL_LIB_NAME = util_x86_gcc
-UTIL_LIB_PATH = $(SWR_LOC)/util/codeblocks_gcc/bin/Debug
+UTIL_LIB_PATH = $(SPJ_SWR_LOC)/util/codeblocks_gcc/bin/Debug
 
 LIBS = -L $(ARITH_LIB_PATH) -L $(UTIL_LIB_PATH) -l$(UTIL_LIB_NAME) -l$(ARITH_LIB_NAME)
 
