@@ -1,0 +1,48 @@
+To install Unity TDD and gcovr. Pruzis 1/30/2019
+------------------------------------------------
+
+This a bare-bones to-do list. I'm using Code::Blocks. The the Code::Blocks projects (.cbp) are
+repo-ed beside (but not with) the utility code. Use ::Blocks if you like, or your own editor.
+
+Install:
+   1. Unity TDD from www.throwtheswitch.org/unity/ (onto c:\Unity)
+   2. Ruby > 2.5.3 (ruby-lang.org)
+   3. MinGW & MSYS  (mingw.org)
+   4. Code::Blocks > 16.01 (codeblocks.org/) (optional)
+   5. Python 2.x or 3.x, if you don't already have it, & pip.
+   6. gcovr (gcovr.com) into /PythonXX/scripts with 'pip install gcovr'
+   7. Git/TortoiseGit to use GitHub (optional)
+   8. Replace c:\unity\auto\generate_test_runner.rb with github/PruzisBdg/Unity-local/tree/master/auto/generate_test_runner.rb
+       (this just reverts the naming of the harness-runner to the way it was in an earlier Unity version)
+
+Paths and hooks (to check)
+   1. If you install MinGW before Code::Blocks AND install in default location then Code::Blocks should find it.
+      Check Settings->Compiler Settings-Toolchain Excutables
+   2. Add e.g C:/MinGW/bin & C:\MinGW\msys\1.0\bin to get to same gcc that Code::Blocks uses.
+      Make sure this gcc is then 1st/only one on PATH
+   3. e.g C:\Ruby25-x64\bin?
+   4. PYTHON? to get to gcovr (installed Pyton so should have it)
+      Make sure the Python with gcovr is the 1st/only one on PATH. Many Apps co-install their own Python so do check this.
+
+If using TDD Utility code:
+   1. It's at github/PruzisBdg
+   2. Copy what you want to a single folder and set SPJ_SWR_LOC=C:/that/folder.
+         No spaces '.', '(' and other emoji bits in your path(s) or makes will break.
+
+To make/extend Unity harnesses.
+   1. Examine .mak's in the existing Utility harnesses. They are tiered, with module specific mak's using the more generic ones.
+   2. make -f some_unit_test.mak; should build, and show test fails or if all good, bring up coverage in browser.
+   3. Examine a test_my_module.c and my_module.mak in /my_module. Just mimic what's in there.
+   4. Read the Unity/TDD docs, for more insight if you like.
+
+About the Code::Blocks projects
+   - Each tranch of utility code has it's own ::Blocks project.
+   - Each project has the following builds
+        a) Debug -> builds a library  (yes, it not debug at all)
+        b) Release - just ignore
+        c) TDD: doesn't build anything; just includes the TDD .maks so you can edit them in ::Blocks
+        d) Console:  So you can drop a failed function into main and debug the offending code.
+
+// ------------------------------------------- eof -------------------------------------------
+
+
