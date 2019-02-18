@@ -46,8 +46,10 @@ ARITH_LIB_NAME = arith_x86_gcc
 ARITH_LIB_PATH = $(SPJ_SWR_LOC)/arith/arith_x86_gcc/bin/Debug
 UTIL_LIB_NAME = util_x86_gcc
 UTIL_LIB_PATH = $(SPJ_SWR_LOC)/util/codeblocks_gcc/bin/Debug
+TINY2_LIB_NAME = tiny2_x86_gcc
+TINY2_LIB_PATH = $(SPJ_SWR_LOC)/tiny2/codeblocks_gcc/bin/Debug
 
-LIBS = -L $(ARITH_LIB_PATH) -L $(UTIL_LIB_PATH) -l$(UTIL_LIB_NAME) -l$(ARITH_LIB_NAME)
+LIBS = -L $(ARITH_LIB_PATH) -L $(UTIL_LIB_PATH) -L $(TINY2_LIB_PATH) -l$(UTIL_LIB_NAME) -l$(ARITH_LIB_NAME) -l$(TINY2_LIB_NAME)
 
 # All units are code coverage enabled, no optimisation, link math lib...
 # (which is used sometimes, and must be explicitly included in some MinGW distributions)
