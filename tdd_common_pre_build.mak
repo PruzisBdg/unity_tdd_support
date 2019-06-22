@@ -8,6 +8,7 @@
 TDD_C_COMPILER ?= mingw32-gcc
 
 # Default location for all Utility software and harnesses are here.
+# But, really SPJ_SWR_LOC needs to be defined on any Host system.
 SPJ_SWR_LOC ?= c:/spj6/swr
 
 ifeq ($(OS),Windows_NT)
