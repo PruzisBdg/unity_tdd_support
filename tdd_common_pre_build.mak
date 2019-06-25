@@ -57,7 +57,7 @@ LIBS = -L $(ARITH_LIB_PATH) -L $(UTIL_LIB_PATH) -L $(TINY2_LIB_PATH) -l$(UTIL_LI
 CFLAGS = --coverage -O0 -lm
 
 # For Linux??
-SYMBOLS=-DTEST
+SYMBOLS=-DTEST -DUNITY_TDD
 BUILDDIR=../build
 
 # All harnesses can see TDD C support code, Unity harness, the public interface for 'util'
