@@ -5,7 +5,7 @@
 # ---------------------------------------------------------------------------
 
 ifeq ($(OS),Windows_NT)
-	CLEANUP = echo del /F /Q ..\build\* && echo del /F /Q $(TARGET)
+	CLEANUP = echo del /F /Q ..\build\* && echo del /F /Q $(TARGET) && echo del /F /Q *.html, *.gcno, *.gcda
 else
 	CLEANUP = rm -f build/*.o ; rm -f $(TARGET) ; mkdir -p build
 endif
