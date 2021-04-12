@@ -24,8 +24,10 @@ Paths and hooks (to check)
    4. PYTHON? to get to gcovr (installed Pyton so should have it)
       Make sure the Python with gcovr is the 1st/only one on PATH. Many Apps co-install their own Python so do check this.
 
-If using TDD Utility code:
-   1. It's at github/PruzisBdg
+If using TDD and Utility code:
+   1. It's at github/PruzisBdg. 
+           'util-small-C', arith-small-C' & math-small-C' are the minimum set. 
+   2. You always need /unity_tdd_support to run harnesses, regardless of what Utility libs you load.
    2. Copy what you want to a single folder and set SPJ_SWR_LOC=C:/that/folder.
          No spaces '.', '(' and other emoji bits in your path(s) or makes will break.
 
