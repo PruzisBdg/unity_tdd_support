@@ -5,7 +5,10 @@
 # ---------------------------------------------------------------------------
 
 # Default TDD compiler: Make sure any libraries you link to are from this/compatible gcc.
-TDD_C_COMPILER ?= mingw32-gcc
+TDD_C_COMPILER ?= gcc
+
+# For the old PRUZISE6500 laptop. If returning to that then set TDD_C_COMPILER
+#TDD_C_COMPILER ?= mingw32-gcc
 
 # Default location for all Utility software and harnesses are here.
 # But, really SPJ_SWR_LOC needs to be defined on any Host system.

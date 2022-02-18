@@ -7,7 +7,7 @@ repo-ed beside (but not with) the utility code. Use ::Blocks if you like, or you
 Install:
    1. Unity TDD from www.throwtheswitch.org/unity/ (onto c:\Unity)
    2. Ruby > 2.5.3 (ruby-lang.org)
-   3. MinGW & MSYS  (mingw.org)
+   3. MSYS2, which will install MinGW
    4. Code::Blocks > 16.01 (codeblocks.org/) (optional)
    5. Python 2.x or 3.x, if you don't already have it, & pip.
    6. gcovr (gcovr.com) into /PythonXX/scripts with 'pip install gcovr'
@@ -16,10 +16,11 @@ Install:
        (this just reverts the naming of the harness-runner to the way it was in an earlier Unity version)
 
 Paths and hooks (to check)
-   1. If you install MinGW before Code::Blocks AND install in default location then Code::Blocks should find it.
-      Check Settings->Compiler Settings-Toolchain Excutables
-   2. Add e.g C:/MinGW/bin & C:\MinGW\msys\1.0\bin to get to same gcc that Code::Blocks uses.
-      Make sure this gcc is then 1st/only one on PATH
+   1. If you install MSYS2/MinGW before Code::Blocks AND install in default location then Code::Blocks should find it.
+      Check Settings->Compiler Settings-Toolchain Excutables.
+   2. Add e.g C:\msys64\mingw64\bin & C:\msys64\usr\bin to get to same gcc that Code::Blocks uses.
+      make and Code::Blocks (or your library build tool) must use the same toolchain.
+   3. If necessary Set TDD_C_COMPILER to override the compiler choice in 'tdd_common_pre_build.mak'.
    3. e.g C:\Ruby25-x64\bin?
    4. PYTHON? to get to gcovr (installed Pyton so should have it)
       Make sure the Python with gcovr is the 1st/only one on PATH. Many Apps co-install their own Python so do check this.
