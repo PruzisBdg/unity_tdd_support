@@ -17,8 +17,8 @@ SPJ_SWR_LOC ?= c:/spj6/swr
 ifeq ($(OS),Windows_NT)
 	TARGET_EXTENSION = .exe
     # Local box must have Unity framework here.
-	UNITYDIR = c:/Unity/src/
-	MAKE_TEST_RUNNER = ruby c:/unity/auto/generate_test_runner.rb
+	UNITYDIR = $(UNITY_PATH)/src/
+	MAKE_TEST_RUNNER = ruby $(UNITY_PATH)/auto/generate_test_runner.rb
 else
     # Linux Host
 	TARGET_EXTENSION = .out
