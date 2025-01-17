@@ -1,4 +1,4 @@
-#include "GenericTypeDefs.h"
+#include "spj_stdint.h"
 #include "tdd_common.h"
 #include <stdlib.h>
 

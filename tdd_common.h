@@ -1,7 +1,7 @@
 #ifndef TDD_COMMON_H
 #define TDD_COMMON_H
 
-#include "GenericTypeDefs.h"
+#include "spj_stdint.h"
 #include <time.h>
 #include <stddef.h>
 

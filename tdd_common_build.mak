@@ -28,7 +28,7 @@ TO_PROJ_ROOT ?= ..
 # Builds test harness with coverage enabled, runs that harness, makes and shows coverage HTML.
 default:
 	$(MAKE_TEST_RUNNER) $(HARNESS_TESTS_SRC) $(HARNESS_MAIN_SRC)
-	$(TDD_C_COMPILER) $(CFLAGS) $(INC_DIRS) $(SYMBOLS) $(SRC_FILES) $(OUT_FILE)
+	$(TDD_C_COMPILER) $(CFLAGS) $(SYMBOLS) $(INC_DIRS) $(SRC_FILES) $(OUT_FILE)
 	./$(TARGET)
 	gcov $(TARGET_BASE)$(CEXT)
 	# To include coverage of the source 'C' file, gcovr must be scoped '-r' from the project root.
