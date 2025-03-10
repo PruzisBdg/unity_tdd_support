@@ -25,9 +25,9 @@ BROWSER ?= ""
 # but if they are unit_test/sub_folders then override this.
 TO_PROJ_ROOT ?= ..
 
-# Exclude .h files and test- and run-test- files from the coverage report.
+# Unless otherwise stated, exclude .h files and test- and run-test- files from the coverage report.
 GCOVR_SRC_EXCL ?= -e".*test-.*\.c|.*\.h"
-# Otherwise, allow C files with the target name in them somewhere.
+# Unless otherwise stated, allow just C files with the target name in them somewhere.
 GCOVR_SRC_FILT ?= -f".*$(TARGET_BASE).*\.c"
 
 # Builds test harness with coverage enabled, runs that harness, makes and shows coverage HTML.
