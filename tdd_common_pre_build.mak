@@ -52,6 +52,8 @@ UTIL_LIB_NAME = util_x86_gcc
 UTIL_LIB_PATH = $(SPJ_SWR_LOC)/util/codeblocks_gcc/bin/Debug
 TINY2_LIB_NAME = tiny2_x86_gcc
 TINY2_LIB_PATH = $(SPJ_SWR_LOC)/tiny2/codeblocks_gcc/bin/Debug
+MATH_LIB_NAME = math_x86_gcc
+MATH_LIB_PATH = $(SPJ_SWR_LOC)/math/codeblocks_gcc/bin/Debug
 
 LIBS = -L $(ARITH_LIB_PATH) -L $(UTIL_LIB_PATH) -L $(TINY2_LIB_PATH) -l$(UTIL_LIB_NAME) -l$(ARITH_LIB_NAME) -l$(TINY2_LIB_NAME)
 
